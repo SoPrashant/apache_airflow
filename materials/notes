@@ -1,0 +1,23 @@
+apache airflow concecpts
+created DAG
+connected with postgres database
+sensor
+
+
+Now you are able to:
+
+Define a Data Pipeline
+
+Execute a SQL request with the PostgresOperator
+
+Execute a Python function with the PythonOperator
+
+Execute an HTTP request against an API
+
+Wait for something to happen with Sensors
+
+Use Hooks to access secret methods
+
+Exchange data between tasks
+
+

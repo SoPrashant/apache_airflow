@@ -1,0 +1,26 @@
+[2024-08-12T16:37:26.350+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2024-08-11T00:00:00+00:00 [queued]>
+[2024-08-12T16:37:26.364+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: user_processing.extract_user scheduled__2024-08-11T00:00:00+00:00 [queued]>
+[2024-08-12T16:37:26.365+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-12T16:37:26.367+0000] {taskinstance.py:1363} INFO - Starting attempt 5 of 5
+[2024-08-12T16:37:26.367+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-12T16:37:26.387+0000] {taskinstance.py:1383} INFO - Executing <Task(SimpleHttpOperator): extract_user> on 2024-08-11 00:00:00+00:00
+[2024-08-12T16:37:26.394+0000] {standard_task_runner.py:55} INFO - Started process 19721 to run task
+[2024-08-12T16:37:26.401+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extract_user', 'scheduled__2024-08-11T00:00:00+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmps41_sbvx']
+[2024-08-12T16:37:26.406+0000] {standard_task_runner.py:83} INFO - Job 44: Subtask extract_user
+[2024-08-12T16:37:26.528+0000] {task_command.py:376} INFO - Running <TaskInstance: user_processing.extract_user scheduled__2024-08-11T00:00:00+00:00 [running]> on host 7b166f9b76f0
+[2024-08-12T16:37:26.623+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extract_user
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-11T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=5
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2024-08-11T00:00:00+00:00
+[2024-08-12T16:37:26.625+0000] {http.py:121} INFO - Calling HTTP method
+[2024-08-12T16:37:26.641+0000] {base.py:71} INFO - Using connection ID 'user_api' for task execution.
+[2024-08-12T16:37:26.645+0000] {http.py:148} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2024-08-12T16:37:27.974+0000] {http.py:125} INFO - {"results":[{"gender":"male","name":{"title":"Mr","first":"Georgije","last":"Kuzmanović"},"location":{"street":{"number":6690,"name":"Gnjilanska"},"city":"Požarevac","state":"Toplica","country":"Serbia","postcode":92147,"coordinates":{"latitude":"60.8332","longitude":"-24.6106"},"timezone":{"offset":"-3:30","description":"Newfoundland"}},"email":"georgije.kuzmanovic@example.com","login":{"uuid":"454a4aee-5cfe-40a6-b4cf-0dde82a7468d","username":"silverzebra101","password":"dinosaur","salt":"wW07cOAm","md5":"a3314dae33d5796352f2b81eda93b725","sha1":"093d810b741a0ab7a57ee4c1b2811e358aee78a1","sha256":"656a2ccf3c49862d97525c3d656eaca6fcc6e1c2ea18f0dfe4cb9fa64acabfcd"},"dob":{"date":"1991-05-26T14:27:58.354Z","age":33},"registered":{"date":"2019-08-08T08:03:17.935Z","age":5},"phone":"021-6423-586","cell":"066-3700-576","id":{"name":"SID","value":"763641105"},"picture":{"large":"https://randomuser.me/api/portraits/men/92.jpg","medium":"https://randomuser.me/api/portraits/med/men/92.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/92.jpg"},"nat":"RS"}],"info":{"seed":"6f8f0b3878ef0c39","results":1,"page":1,"version":"1.4"}}
+[2024-08-12T16:37:28.022+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extract_user, execution_date=20240811T000000, start_date=20240812T163726, end_date=20240812T163728
+[2024-08-12T16:37:28.091+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2024-08-12T16:37:28.170+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
